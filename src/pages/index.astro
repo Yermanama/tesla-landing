@@ -1,6 +1,7 @@
 ---
 import LandingHeader from '../components/LandingHeader.astro'
-import HeroSection from '../components/HeroSection.astro'
+import ModelYSection from '../components/ModelYSection.astro'
+import ChargeSection from '../components/ChargeSection.astro'
 ---
 
 <html lang="en">
@@ -23,10 +24,14 @@ import HeroSection from '../components/HeroSection.astro'
   </head>
 
   <LandingHeader />
-  <main class="relative w-screen h-screen overflow-auto"> <!-- overflow-auto se necesita para que el footer no se quede pegado al final de la página -->
-    <! TODO: Me he quedado por aquí -->
-    <HeroSection />
-    <HeroSection />
+  <main class="snap-y snap-mandatory relative w-screen h-screen overflow-auto overflow-x-hidden">
+    <div class="snap-center">
+      <ModelYSection />
+    </div>
+    <div class="snap-center">
+      <ChargeSection/>
+    </div>
+
   </main>
 
 </html>
